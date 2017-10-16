@@ -6,7 +6,7 @@ ADD openwrt-15.05.1-x86-64-rootfs.tar.gz /
 RUN mkdir /var/lock && \
     opkg update && \
     opkg install uhttpd-mod-lua && \
-    opkg install luci-i18n-chinese && \
+    opkg install luci-i18n-base-zh-cn && \
     uci set uhttpd.main.interpreter='.lua=/usr/bin/lua' && \
     uci commit uhttpd
 
