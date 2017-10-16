@@ -7,6 +7,14 @@ RUN mkdir /var/lock && \
     opkg update && \
     opkg install uhttpd-mod-lua && \
     opkg install luci-i18n-base-zh-cn && \
+    opkg install shadowsocks-client && \
+    opkg install minidlna && \
+    opkg install luci-i18n-minidlna-zh-cn && \
+    opkg install lftp && \
+    opkg install openssh-server && \
+    opkg install openssh-sftp-server && \
+    opkg install samba36-server && \
+    opkg install luci-i18n-samba-zh-cn && \
     uci set uhttpd.main.interpreter='.lua=/usr/bin/lua' && \
     uci commit uhttpd
 
